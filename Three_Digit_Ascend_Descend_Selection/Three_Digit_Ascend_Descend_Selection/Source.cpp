@@ -28,33 +28,24 @@ void main() {// assigning variables
 	int C = x % 10;//allows use of all three numbers as seperate variables
 	int B = (x / 10) % 10;
 	int A = (x / 100) % 10;
-	bool ascending;
-	bool descending;
+	bool ascending = false;
+	bool descending = false;
+	bool same = false;
 
 
 	
-	
-		ascending = A != B && B != C;
-	descending = ascending; //saying that if A does not equal B, and B does not equal C, then it is either ascending or descending.
-	if (A > B) {
-		ascending = false;
-	}
-	
-	else {
-		descending = false;
-	}
-	
-	if (B > C) {
-		ascending = false;
-	}
-
-	else {
-		descending = false;
-	}
-	if (ascending) {
+	if (a == b && b == c)
+		same = true;
+	//ascending = A != B && B != C;
+	//descending = ascending; //saying that if A does not equal B, and B does not equal C, then it is either ascending or descending.
+	if (b > a && c > b)
+		ascending = true;
+	else if (a > b && b > c)
+		descending = true;
+	if (ascending && !same) {
 		cout << "The numbers are Ascending.    ";
 	}
-	else if (descending) {
+	else if (descending && !same) {
 		cout << "The numbers are Descending.    ";
 	}
 	else {
