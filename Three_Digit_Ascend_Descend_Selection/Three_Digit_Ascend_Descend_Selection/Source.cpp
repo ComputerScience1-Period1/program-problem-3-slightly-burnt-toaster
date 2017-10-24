@@ -17,49 +17,55 @@ void pause() {
 }
 // MAIN
 void main() {// assigning variables
+	int count = 0;
 	int x;
-	
 
-	cout << "Please choose a random 3 digit number";// alows user input of numbers.
-	cin >> x;
+	do {
 
 
-
-	int C = x % 10;//allows use of all three numbers as seperate variables
-	int B = (x / 10) % 10;
-	int A = (x / 100) % 10;
-	bool ascending;
-	bool descending;
+		cout << "Please choose a random 3 digit number";// alows user input of numbers.
+		cin >> x;
 
 
-	
-	
+
+		int C = x % 10;//allows use of all three numbers as seperate variables
+		int B = (x / 10) % 10;
+		int A = (x / 100) % 10;
+		bool ascending;
+		bool descending;
+
+
+
+
 		ascending = A != B && B != C;
-	descending = ascending; //saying that if A does not equal B, and B does not equal C, then it is either ascending or descending.
-	if (A > B) {
-		ascending = false;
-	}
-	
-	else {
-		descending = false;
-	}
-	
-	if (B > C) {
-		ascending = false;
-	}
+		descending = ascending; //saying that if A does not equal B, and B does not equal C, then it is either ascending or descending.
+		if (A > B) {
+			ascending = false;
+		}
 
-	else {
-		descending = false;
-	}
-	if (ascending) {
-		cout << "The numbers are Ascending.    ";
-	}
-	else if (descending) {
-		cout << "The numbers are Descending.    ";
-	}
-	else {
-	cout << "The numbers are Neither ascending or descending.   ";
-}
+		else {
+			descending = false;
+		}
 
-pause();
+		if (B > C) {
+			ascending = false;
+		}
+
+		else {
+			descending = false;
+		}
+		if (ascending) {
+			cout << x << " is ascending.";
+		}
+		else if (descending) {
+			cout << x << " is descending.    ";
+		}
+		else {
+			cout << x << " is neither ascending or descending.   ";
+		}
+
+		pause();
+		count = count + 1;
+	} while (count < 30);
+
 }
