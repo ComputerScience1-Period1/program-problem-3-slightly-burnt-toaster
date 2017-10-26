@@ -20,8 +20,8 @@ void main() {// assigning variables
 	int x;
 	
 
-	cout << "Please choose a random 3 digit number";// alows user input of numbers.
-	cin >> x;
+	  cout << "Please choose a random 3 digit number";// alows user input of numbers.
+	  cin >> x;
 
 
 
@@ -31,11 +31,11 @@ void main() {// assigning variables
 	bool ascending;
 	bool descending;
 
-
+ // defining the variable before using it helps the computer know what ther variable holds
 	
 	
 		ascending = A != B && B != C;
-	descending = ascending; //saying that if A does not equal B, and B does not equal C, then it is either ascending or descending.
+	descending = ascending; //This statment is saying that if a is not equal b and b does not equal c then this number is assending.
 	if (A > B) {
 		ascending = false;
 	}
@@ -46,18 +46,18 @@ void main() {// assigning variables
 	
 	if (B > C) {
 		ascending = false;
-	}
+	} 
 
-	else {
+	 else {
 		descending = false;
 	}
 	if (ascending) {
 		cout << "The numbers are Ascending.    ";
 	}
-	else if (descending) {
+	 else if (descending) {
 		cout << "The numbers are Descending.    ";
 	}
-	else {
+	 else {
 	cout << "The numbers are Neither ascending or descending.   ";
 }
 
