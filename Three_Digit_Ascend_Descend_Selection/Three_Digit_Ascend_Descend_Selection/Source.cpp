@@ -35,7 +35,7 @@ void main() {// assigning variables
 	
 	
 		ascending = A != B && B != C;
-	descending = ascending; //This statment is saying that if a is not equal b and b does not equal c then this number is assending.
+	descending = ascending; //This statment is saying that if doesn't equal b and b does not equal c then this number is assending.
 	if (A > B) {
 		ascending = false;
 	}
